@@ -5,7 +5,7 @@ import 'dotenv/config';
 export default class DB{
     constructor(Mongosh,Atlas){
         // this.connectionString=process.env.MONGOSH || "";
-        this.clientLocal=new MongoClient(Mongosh,{serverSelectionTimeoutMS:1000});
+        this.clientLocal=new MongoClient(Mongosh,{serverSelectionTimeoutMS:500});
         this.clientAtlas=new MongoClient(Atlas)
 
         //code to mysql here
