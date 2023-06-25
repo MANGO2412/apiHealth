@@ -30,6 +30,7 @@ export default class DB{
         dbs['mongosh']= null
 
         //check if there is connection to Atlas
+        console.time('connect')
         try{
             let conn=await this.clientAtlas.connect()
             dbs['atlas']= conn.db('cinema');
@@ -37,6 +38,7 @@ export default class DB{
             console.log("there is any error with atlas: ",error)
             dbs['atlas']=null
         }
+        console.timeEnd('connect')
 
         return dbs;
 
