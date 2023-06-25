@@ -15,18 +15,19 @@ export default class DB{
     connectionDBS=async ()=>{
         let dbs={}
 
-        console.time('connect')
+        // console.time('connect')
         //check if there is  connection to Monogosh
-        try {
-            let conn=await this.clientLocal.connect()
-            console.timeEnd('connect')
-            dbs['mongosh']= conn.db('cinema');  
-        } catch (error) {
-            console.log("there is any error with mongosh: ",error)
-            console.timeEnd('connect')
-            dbs['mongosh']= null
-        }
+        // try {
+        //     let conn=await this.clientLocal.connect()
+        //     console.timeEnd('connect')
+        //     dbs['mongosh']= conn.db('cinema');  
+        // } catch (error) {
+        //     console.log("there is any error with mongosh: ",error)
+        //     console.timeEnd('connect')
+        //     dbs['mongosh']= null
+        // }
 
+        dbs['mongosh']= null
 
         //check if there is connection to Atlas
         try{
