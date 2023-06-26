@@ -7,10 +7,11 @@ const app=express();
 app.use(cors())
 
 //db class 
-let mongo=new DB(process.env.MONGOSH,process.env.ATLAS) 
+let mongo=new DB(process.env.MONGOSH,"mongodb+srv://manuel:lima123@cluster0.ny3z4us.mongodb.net/?retryWrites=true&w=majority") 
 
 
 app.get('/',(req,res)=>{
+   console.log(process.env)
    res.send("hello world")
 })
 
