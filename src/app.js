@@ -9,7 +9,13 @@ app.use(cors())
 //db class 
 let mongo=new DB(process.env.MONGOSH,process.env.ATLAS) 
 
-app.get('/',async (req,res)=>{
+
+app.get('/',(req,res)=>{
+   res.send("hello world")
+})
+
+
+app.get('/movie',async (req,res)=>{
     try {
         const result = await mongo.get('Movie');
         res.send(result).status(200);
