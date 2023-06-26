@@ -1,5 +1,7 @@
 import app from './src/app.js'
 
-app.listen(9000,()=>{
-    console.log('hello world')
+
+const port = process.env.PORT || 3000;
+app.listen(port,()=>{
+    console.log(`Example app listening on port ${port}!`)
 })
