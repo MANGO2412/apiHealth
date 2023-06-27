@@ -27,7 +27,6 @@ export default class DB{
             dbs['mongosh']= null
         }
 
-        dbs['mongosh']= null
 
         //check if there is connection to Atlas
         console.time('connect')
@@ -41,7 +40,6 @@ export default class DB{
         console.timeEnd('connect')
 
         return dbs;
-
     }
 
     validateQuery= async (db,collec,command,codition=null)=>{
